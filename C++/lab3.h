@@ -1,4 +1,3 @@
-
 #include <iostream>		
 #include <string>               
 #include <cmath>
@@ -15,9 +14,9 @@ class Numbers{
         
         void menu(){
             cout << "\nLab. 3 OOP" << endl;
-            cout << "1 = Exercitiu 1" << endl;
-            cout << "2 = Exercitiu 2" << endl;
-            cout << "4 = Exercitiu 4" << endl;
+            cout << "1 = Ubung 1" << endl;
+            cout << "2 = Ubung 2" << endl;
+            cout << "4 = Ubung 4" << endl;
             cout << "0 = EXIT" << endl;
         }//menu()
         
@@ -25,17 +24,17 @@ class Numbers{
         void ex_1(){            
             string nick;
             int year;
-            cout << "nick = ";
+            cout << "Nick = ";
             cin >> nick; 
             if(cin.fail()) { cout << "Error String! Exit Now!"; cin.clear(); 
                             exit (EXIT_FAILURE);
                             }
-            cout << "\nyear = ";
+            cout << "\nJahr = ";
             cin >> year; 
             if(cin.fail()) { cout << "Error Integer! Exit Now!"; cin.clear();
                             exit (EXIT_FAILURE);
                             }
-            cout << nick << " was born on " << year;
+            cout << nick << " wurde auf " << year << " geboren";
         }//ex_1
         
        
@@ -83,12 +82,12 @@ class Numbers{
             int grade{0};
             
             while (true){
-                cout << "Type 0 if you want out\nday = ";
+                cout << "0 = Exit \nTag = ";
                 cin>>day;
                 if (day=="0")
                     break;
                 cout << endl;
-                cout << "grade = ";
+                cout << "note = ";
                 cin>>grade;
                 if (day== "mon")
                     mon.push_back(grade);
@@ -123,7 +122,7 @@ int main( ) {
     while (true) {
         lab3.menu();
         char opt;
-        cout << "\n Choose an option : " << endl;
+        cout << "\n Wahle eine Option : " << endl;
         cin >> opt;
         if (opt == '1'){
             lab3.ex_1();
@@ -136,6 +135,7 @@ int main( ) {
         }
         else {
             cout << "Exit now!";
+            break;
         }
     }//while
      
